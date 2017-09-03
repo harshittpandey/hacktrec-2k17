@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Hacktrec 2k17</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<!--[if IE]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<script>
+			document.documentElement.className = 'js';
+		</script>
+		<script src="js/segment.min.js"></script>
+		<script src="js/d3-ease.v0.6.js"></script>
+		<script src="js/letters.js"></script>
+	</head>
+	<body class="demo-1">
+		<div class="container">
+			<header class="codrops-header">
+				<div class="deco" style="" aria-hidden="true">o</div>
+				
+			</header>
+			<h2 class="w3-center " style="font-size: 350%;margin-top: -25px">HACK TREC 2K17</h2>
+		</div>
+		<!-- /container -->
+		<script>
+		(function() {
+			var decoLetter = new Letters(document.querySelector('.deco'), {	
+				size: 1000,
+				weight: 5,
+				color: 'white',
+				//color: '#63646B',
+				duration: 2,
+				fade:0,
+				easing: d3_ease.easeExpOut.ease
+			});
+			decoLetter.hideInstantly();
+			setTimeout(function() {
+				decoLetter.show();
+			}, 200);
+		})();
+		</script>
+		<script src="js/mo.min.js"></script>
+		<script src="js/demo-1.js"></script>
+	</body>
+</html>
