@@ -6,6 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Hacktrec 2k17</title>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+    	<link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Barrio" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -19,6 +20,94 @@
 		<script src="js/d3-ease.v0.6.js"></script>
 		<script src="js/letters.js"></script>
 		<style type="text/css">
+            .body-1 {
+			font-family: 'Nunito', monospace;
+			color: #fff;
+			background-color: #001a33;
+			min-height: 100vh;
+		    }
+		    main {
+			position: relative;
+		    width: 100%;
+     		}
+
+     		.content {
+			position: relative;
+			display: grid;
+			align-content: center;
+			height: 100vh;
+			overflow: hidden;
+			min-height: 650px;
+		    }
+		    .content--layout {
+			grid-template-columns: 100%;
+			padding: 3em 0;
+		    }
+
+		   .demo-crossword {
+			color: #fff;
+			background-color: #001a33;
+            }
+            
+            /* Common styles for the words */
+			.word {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			flex-wrap: wrap;
+			margin: 0;
+			cursor: default;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+        	}
+            
+            @media screen and (max-width: 50em) {
+				html, .body-1 {
+					overflow-x: hidden;
+					width: 100vw;
+					height: 100%;
+				}
+				.content {
+					height: auto;
+					min-height: 0;
+				}
+				.content--layout {
+					overflow: visible;
+				}
+			}
+        
+            .word--crossword {
+				font-size: 14vh;
+				font-family: 'Barrio', serif;
+				font-weight: 400;
+				text-transform: uppercase;
+				color: #fff;
+				line-height: 0.9;
+				margin: 0;
+				display: grid;
+				grid-template-columns: repeat(auto-fit, 0.65em);
+				
+     		}
+	     		.word--crossword span {
+				text-align: center;	
+				display: block;
+			}
+
+			.word__cross {
+				pointer-events: none;
+				color: #000d1a;
+			}
+
+			.word__cross span {
+				opacity: 0;
+			}
+
+
+
 			.allerta {
                 font-family: "Allerta Stencil", Sans-serif;
             }
@@ -30,6 +119,7 @@
 				    background-repeat: no-repeat;
 				    background-size: cover;
 			 }
+
 		</style>
 	</head>
 	<body class="demo-1">
@@ -40,8 +130,27 @@
 				<img class="image-1 w3-hide-large w3-hide-medium" src="./img/hacktrec.png" style="width: 65%">
 				<img class="image-1 w3-hide-small w3-hide-large" src="./img/hacktrec.png" style="width: 40%">
 			</header>
-			<h2 class="w3-center allerta word-1" style="font-size: 450%;margin-top: -35px;word-spacing: 4px">HACK TREC 2K17</h2>
+			<h2 class="w3-center allerta w3-text-white" style="font-size: 450%;margin-top: -35px;word-spacing: 4px">HACK TREC 2K17</h2>
 		</div>
+        <div class="body-1 demo-crossword ">
+		<main class="w3-margin-left">
+			<section class="content content--layout">
+				<h2 class="word word--crossword">
+					<span class="word__main" data-column="1" data-row="4">HACKTREC</span>
+					<span class="word__cross" data-column="1" data-row="4">Heart</span>
+					<span class="word__cross" data-column="2" data-row="2">Heart</span>
+					<span class="word__cross" data-column="3" data-row="1">Embrace</span>
+					<span class="word__cross" data-column="4" data-row="3">Skit</span>
+					<span class="word__cross" data-column="5" data-row="2">tata</span>
+					<span class="word__cross" data-column="6" data-row="1">Heart</span>
+					<span class="word__cross" data-column="7" data-row="3">Heart</span>
+					<span class="word__cross" data-column="8" data-row="4">Chip</span>
+				</h2>
+			</section>
+		</main>
+    	
+	    	
+	    </div>
 		<!--<div class="">
 			<img src="./img/poster.jpg" class="w3-hide-small w3-hide-medium" style="width: 100%">
 			<img src="./img/poster.jpg" class="w3-hide-large " style="width: 150%">
@@ -72,6 +181,11 @@
 			}, 200);
 		})();
 		</script>
+
+		<script src="js/charming.min.js"></script>
+		<script src="js/anime.min.js"></script>
+		<script src="js/demo.js"></script>
+		<script src="js/demo7.js"></script>
 		<script src="js/mo.min.js"></script>
 		<script src="js/demo-1.js"></script>
 	</body>
