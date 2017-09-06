@@ -6,31 +6,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Slideshow</title>
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 		<!--[if IE]>
   		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<style type="text/css">
-		  
-		   *,*:after,
-			*:before {
-				-webkit-box-sizing: border-box;
-				box-sizing: border-box;
-			}
-
-			.clearfix:before,
-			.clearfix:after {
-				content: '';
-				display: table;
-			}
-
-			.clearfix:after {
-				clear: both;
-			}
+		               
+            .heading{
+            	  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+				  color: #fff;
+            }
 
 		</style>
 	</head>
-	<body style="background-color: #000d1a;margin-bottom:-10px ">
-		<div style="position: relative;	overflow: hidden;width: 100%;">
+	<body style="background-color: #000d1a">
+	  <div >
+		<div style="position: relative;overflow: hidden;width: 100%;">
 			<div class="deco deco--title"></div>
 			<div id="slideshow" class="slideshow">
 				<div class="slide">
@@ -167,7 +158,8 @@
 				<button class="action action--close" aria-label="Close">x</i></button>
 			</div>
 		</div><!-- /container -->
-		<script src="js/classie.js"></script>
+		</div>
+      	<script src="js/classie.js"></script>
 		<script src="js/dynamics.min.js"></script>
 		<script src="js/main.js"></script>
 		<script>
