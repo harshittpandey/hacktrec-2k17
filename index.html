@@ -294,6 +294,95 @@
   			height: auto;
 			}
 
+		 .sponsor-btn {
+			border: none;
+			font-family: inherit;
+			font-size: inherit;
+			color: inherit;
+			background: none;
+			cursor: pointer;
+			padding: 25px 80px;
+			display: inline-block;
+			margin: 15px 30px;
+			text-transform: uppercase;
+			letter-spacing: 1px;
+			font-weight: 700;
+			outline: none;
+			position: relative;
+			-webkit-transition: all 0.3s;
+			-moz-transition: all 0.3s;
+			transition: all 0.3s;
+		   }
+		   .btn:after {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				-webkit-transition: all 0.3s;
+				-moz-transition: all 0.3s;
+				transition: all 0.3s;
+			}
+
+			/* Pseudo elements for icons */
+			.btn:before{
+				font-family: 'icomoon';
+				speak: none;
+				font-style: normal;
+				font-weight: normal;
+				font-variant: normal;
+				text-transform: none;
+				line-height: 1;
+				position: relative;
+				-webkit-font-smoothing: antialiased;
+			 }
+			    .btn-6 {
+				color: #fff;
+				background: #000d1a;
+				-webkit-transition: none;
+				-moz-transition: none;
+				transition: none;
+			    }
+
+			    .btn-6:active {
+				   top: 2px;
+			    }
+
+
+
+				 .btn-6e {
+				    border: 2px dashed #000d1a;
+				    border-radius: 15px;
+			     }
+
+			     .btn-6e:hover {
+				    background: transparent;
+				    color: #000d1a;
+			     }
+			     .sponsor-btn span {
+				  cursor: pointer;
+				  display: inline-block;
+				  position: relative;
+				  transition: 0.5s;
+				}
+
+				.sponsor-btn span:after {
+				  content: '\00bb';
+				  position: absolute;
+				  opacity: 0;
+				  top: 0;
+				  right: -20px;
+				  transition: 0.5s;
+				}
+
+				.sponsor-btn:hover span {
+				  padding-right: 25px;
+				}
+
+				.sponsor-btn:hover span:after {
+				  opacity: 1;
+				  right: 0;
+				}
+
+
 		</style>
 	</head>
 	<body class="demo-1">
@@ -356,11 +445,16 @@
 		   <a href="www.google.com" class="w3-large w3-hover-grey w3-black w3-text-white w3-padding-large wow fadeInDown" data-wow-offset="300" style="text-decoration: none;margin-top: 0px;"> REGISTER  </a>
 		</div>
 
-		<div class="w3-row" style="padding-top: 19%;padding-bottom: 30%;margin-top: -100px">
+		<div class="w3-row" style="background: url('./img/website3.jpg'); padding-top: 19%;padding-bottom: 30%;margin-top: -100px">
 			<div class="w3-col l6">
-			
+				<h2 class="allerta w3-center w3-xxxlarge" style="margin-top: 5%">
+					OUR SPONSORS
+				</h2>
+				<br>
+				<a style="text-decoration: none;" href="sponsor.html"><button class="w3-large sponsor-btn button btn-6 btn-6e" style="margin-left: 15vw"><span>CHECK</span></button></a>
+					
 			</div>
-			<div class="w3-col l6">
+			<div class="w3-col l5">
 				
 			</div>
 		</div>
