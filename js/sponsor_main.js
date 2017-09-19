@@ -40,7 +40,7 @@
 		extend( this.options, options );
 
 		// items
-		this.items = [].slice.call(this.el.querySelectorAll('.slide'));
+		this.items = [].slice.call(this.el.querySelectorAll('.sponsor_slide'));
 		// total items
 		this.itemsTotal = this.items.length;
 		if( this.itemsTotal < 2 ) return;
@@ -88,12 +88,12 @@
 			var expanderEl = document.createElement('div');
 			expanderEl.className = 'deco deco--circle deco--expander';
 
-			var slideEl = item.querySelector('.slide__item');
+			var slideEl = item.querySelector('.sponsor_slide__item');
 			slideEl.insertBefore(expanderEl, slideEl.firstChild);
 		});
 
 		// position current item:
-		classie.add(this.items[this.current], 'slide--current');
+		classie.add(this.items[this.current], 'sponsor_slide--current');
 		// event binding
 		this._initEvents();
 	};
@@ -186,8 +186,8 @@
 
 		var self = this,
 			itemCurrent = this.items[this.current],
-			currentEl = itemCurrent.querySelector('.slide__item'),
-			currentTitleEl = itemCurrent.querySelector('.slide__title');
+			currentEl = itemCurrent.querySelector('.sponsor_slide__item'),
+			currentTitleEl = itemCurrent.querySelector('.sponsor_slide__title');
 
 		// update new current value
 		if( dir === 'right' ) {
@@ -198,8 +198,8 @@
 		}
 
 		var itemNext = this.items[this.current],
-			nextEl = itemNext.querySelector('.slide__item'),
-			nextTitleEl = itemNext.querySelector('.slide__title');
+			nextEl = itemNext.querySelector('.sponsor_slide__item'),
+			nextTitleEl = itemNext.querySelector('.sponsor_slide__title');
 		
 		// animate the current element out
 		dynamics.animate(currentEl, 
@@ -236,8 +236,8 @@
 			{
 				type: dynamics.spring, duration: 3000, friction: 700, frequency: 500,
 				complete: function() {
-					self.items.forEach(function(item) { classie.remove(item, 'slide--current'); });
-					classie.add(itemNext, 'slide--current');
+					self.items.forEach(function(item) { classie.remove(item, 'sponsor_slide--current'); });
+					classie.add(itemNext, 'sponsor_slide--current');
 				}
 			}
 		);
@@ -293,16 +293,16 @@
 		var self = this,
 			expanderEl = item.querySelector('.deco--expander'),
 			scaleVal = Math.ceil(Math.sqrt(Math.pow(docWidth, 2) + Math.pow(docHeight, 2)) / expanderEl.offsetWidth),
-			smallImgEl = item.querySelector('.slide__img--small'),
-			contentEl = item.querySelector('.slide__content'),
-			largeImgEl = contentEl.querySelector('.slide__img--large'),
-			titleEl = contentEl.querySelector('.slide__title--main'),
-			descriptionEl = contentEl.querySelector('.slide__description'),
-			priceEl = contentEl.querySelector('.slide__price'),
+			smallImgEl = item.querySelector('.sponsor_slide__img--small'),
+			contentEl = item.querySelector('.sponsor_slide__content'),
+			largeImgEl = contentEl.querySelector('.sponsor_slide__img--large'),
+			titleEl = contentEl.querySelector('.sponsor_slide__title--main'),
+			descriptionEl = contentEl.querySelector('.sponsor_slide__description'),
+			priceEl = contentEl.querySelector('.sponsor_slide__price'),
 			buyEl = contentEl.querySelector('.button--buy');
 
 		// add slide--open class to the item
-		classie.add(item, 'slide--open');
+		classie.add(item, 'sponsor_slide--open');
 		// prevent scrolling
 		bodyEl.style.top = -scrollY() + 'px';
 		classie.add(bodyEl, 'lockscroll');
@@ -409,16 +409,16 @@
 		var self = this,
 			item = this.expandedItem,
 			expanderEl = item.querySelector('.deco--expander'),
-			smallImgEl = item.querySelector('.slide__img--small'),
-			contentEl = item.querySelector('.slide__content'),
-			largeImgEl = contentEl.querySelector('.slide__img--large'),
-			titleEl = contentEl.querySelector('.slide__title--main'),
-			descriptionEl = contentEl.querySelector('.slide__description'),
-			priceEl = contentEl.querySelector('.slide__price'),
+			smallImgEl = item.querySelector('.sponsor_slide__img--small'),
+			contentEl = item.querySelector('.sponsor_slide__content'),
+			largeImgEl = contentEl.querySelector('.sponsor_slide__img--large'),
+			titleEl = contentEl.querySelector('.sponsor_slide__title--main'),
+			descriptionEl = contentEl.querySelector('.sponsor_slide__description'),
+			priceEl = contentEl.querySelector('.sponsor_slide__price'),
 			buyEl = contentEl.querySelector('.button--buy');
 
 		// add slide--close class to the item
-		classie.add(item, 'slide--close');
+		classie.add(item, 'sponsor_slide--close');
 
 		// remove .noscroll from body and .scrollable from .slide__content
 		classie.remove(bodyEl, 'noscroll');
@@ -477,9 +477,9 @@
 				type: dynamics.bezier, points: [{"x":0,"y":0,"cp":[{"x":0.2,"y":1}]},{"x":1,"y":1,"cp":[{"x":0.3,"y":1}]}], duration: 500, delay: 300,
 				complete: function() {
 					// remove slide--open class to the item
-					classie.remove(item, 'slide--open');
+					classie.remove(item, 'sponsor_slide--open');
 					// remove slide--close class to the item
-					classie.remove(item, 'slide--close');
+					classie.remove(item, 'sponsor_slide--close');
 					// allow scrolling
 					classie.remove(bodyEl, 'lockscroll');
 					self.isExpanded = false;
