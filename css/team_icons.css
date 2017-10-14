@@ -1,0 +1,115 @@
+.icon-wrap {
+	text-align: center;
+	margin: 0 auto;
+	padding: 1em 0 2em;
+}
+
+.icon-effect-5 .icon {
+	box-shadow: 0 0 0 4px #2D2D2D;
+	overflow: hidden;
+	-webkit-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+	-moz-transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+	transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.icon-effect-5 .icon:after {
+	
+}
+
+.icon-effect-5 .icon:hover {
+	background: #2D2D2D;
+	color: #a8a8a8;
+	box-shadow: 0 0 0 3px #a8a8a8;
+}
+
+.icon-effect-5a .icon:hover:before {
+	-webkit-animation: toRightFromLeft 0.3s forwards;
+	-moz-animation: toRightFromLeft 0.3s forwards;
+	animation: toRightFromLeft 0.3s forwards;
+}
+
+@-webkit-keyframes toRightFromLeft {
+	49% {
+		-webkit-transform: translate(100%);
+	}
+	50% {
+		opacity: 0;
+		-webkit-transform: translate(-100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+@-moz-keyframes toRightFromLeft {
+	49% {
+		-moz-transform: translate(100%);
+	}
+	50% {
+		opacity: 0;
+		-moz-transform: translate(-100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+@keyframes toRightFromLeft {
+	49% {
+		transform: translate(100%);
+	}
+	50% {
+		opacity: 0;
+		transform: translate(-100%);
+	}
+	51% {
+		opacity: 1;
+	}
+}
+
+
+.icon {
+	display: inline-block;
+	font-size: 0px;
+	cursor: pointer;
+	margin: 15px 30px;
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	text-align: center;
+	position: relative;
+	z-index: 1;
+	color: #2D2D2D;
+}
+
+.icon:after {
+	pointer-events: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	content: '';
+	-webkit-box-sizing: content-box; 
+	-moz-box-sizing: content-box; 
+	box-sizing: content-box;
+}
+
+.icon:before {
+	speak: none;
+	font-size: 70px;
+	line-height: 142px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	display: block;
+	-webkit-font-smoothing: antialiased;
+}
+.fa-Ec:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'EC';
+}
+.fa-Ev:before {
+    font-family: Arial; /* your font family here! */
+    font-weight: bold;
+    content: 'EV';
+}
