@@ -559,7 +559,52 @@
 			     <span class="unica-one w3-jumbo w3-text-white w3-wide">CONTACT</span>
 			  </div>
 		</div>
+        <div style="background-color: #fff;padding-top: 2%;padding-bottom: 2%">
+        	<h2 class="neucha w3-text-black w3-wide w3-xxxlarge" style="text-align: center">
+					OUR TEAM
+			</h2>
+			 <hr style="margin-left: 5%;margin-right: 5%;">
+			 <div class="w3-row">
+				<div class="w3-container w3-col s4" >
+				  <button onclick="document.getElementById('id01').style.display='block'" class="w3-button " style="background-color:#d3d3d3;">Event Coordinators</button>
 
+				  <div id="id01" class="w3-modal">
+				    <div class="w3-modal-content w3-card-4">
+				      <header class="w3-container"> 
+				        <span onclick="document.getElementById('id01').style.display='none'" 
+				        class="w3-button w3-display-topright">&times;</span>
+				      </header>
+				      <div class="w3-container">
+				        <p>Abhishek Vats:</p>
+				        <p>Nanidni Tayal:</p>
+				        <p>Anuranjan Bose:</p>
+				        <p>Harshit Pandey:</p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+
+				<div class="w3-container w3-col s4" >
+				  <button onclick="document.getElementById('id02').style.display='block'" class="w3-button " style="background-color:#d3d3d3;">Event Volunteers</button>
+
+				  <div id="id02" class="w3-modal">
+				    <div class="w3-modal-content w3-card-4">
+				      <header class="w3-container"> 
+				        <span onclick="document.getElementById('id02').style.display='none'" 
+				        class="w3-button w3-display-topright">&times;</span>
+				      </header>
+				      <div class="w3-container">
+				        <p>Name 1:</p>
+				        <p>Name 2:</p>
+				        <p>Name 3:</p>
+				        <p>Name 4:</p>
+				      </div>
+				    </div>
+				  </div>
+				</div>
+				</div>
+		 
+        </div>
 		<!-- Container (Contact Section) -->
 		<div style="background-color: #fff;width: 100%;">
 			<div class=" w3-content w3-container "  id="contact" >
@@ -608,7 +653,21 @@
 			</div>
 		</div>-->
 		<!-- /container -->
+        <script>
+		// Get the modal
+		var modal = document.getElementById('id01');
+		var modal1 = document.getElementById('id02');
 
+		// When the user clicks anywhere outside of the modal, close it
+		window.onclick = function(event) {
+		    if (event.target == modal) {
+		        modal.style.display = "none";
+		    }
+		    if (event.target == modal1) {
+		        modal1.style.display = "none";
+		    }
+		}
+		</script>
 		<script>
 		(function() {
 			var decoLetter = new Letters(document.querySelector('.deco'), {	
