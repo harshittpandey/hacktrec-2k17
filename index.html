@@ -9,9 +9,10 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
 		<link href="https://fonts.googleapis.com/css?family=Nunito:400,700|Barrio" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Arapey|Archivo+Black|Elsie+Swash+Caps|Playfair+Display|Anton|Rubik|Teko:600|Sacramento|Abril+Fatface|Cormorant+Garamond|Neucha|Unica+One|Old+Standard+TT" rel="stylesheet">
+
 		<link rel="stylesheet" type="text/css" href="css/normalize.css" />
 		<link href='https://fonts.googleapis.com/css?family=Unica One' rel='stylesheet'>
-
+		<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Arapey" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" type="text/css" href="css/demo.css" />
 		<link rel="stylesheet" type="text/css" href="css/lettereffect.css" />
@@ -21,7 +22,9 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 
 	    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <!--[if IE]>
+        
+		<link rel="stylesheet" type="text/css" href="css/component2.css" />
+		<!--[if IE]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<script>
@@ -29,7 +32,7 @@
 		</script>
 		<script src="js/segment.min.js"></script>
 		<script src="js/d3-ease.v0.6.js"></script>
-		<script src="js/letters.js"></script>
+		<script src="js/letters.js"></script><script src="js/modernizr.custom.js"></script>
 		<style type="text/css">
             .body-1 {
 			font-family: 'Nunito', monospace;
@@ -41,6 +44,10 @@
 			position: relative;
 		    width: 100%;
      		}
+            .rubik {
+				font-family: 'Nunito', monospace;
+				font-weight: 400;
+			}
 
      		.neucha {
 				font-family: 'Neucha', serif;
@@ -62,6 +69,12 @@
 		   .demo-crossword {
 			color: #fff;
 			background-color: #001a33;
+            }
+
+            hr{
+            	color: #2D2D2D;
+            	border-color: #2D2D2D;
+            	border-style: solid;
             }
             
             /* Common styles for the words */
@@ -454,9 +467,13 @@
 			     	<section class="content-letter-style content--c7" >
 					   <div class="slideshow slideshow--7" data-effect="fx7">
 						 <div class="slide slide--current"><p class="title title--style-7"><span class="hover-effect">H</span><span class="hover-effect">a</span><span class="hover-effect">c</span><span class="hover-effect">k</span><span class="hover-effect">T</span><span class="hover-effect">R</span><span class="hover-effect">E</span><span class="hover-effect">C</span><span class="hover-effect"> i</span><span class="hover-effect">s</span><span class="hover-effect"> a</span><span class="hover-effect"> p</span><span class="hover-effect">l</span><span class="hover-effect">a</span><span class="hover-effect">c</span><span class="hover-effect">e</span><span class="hover-effect"> t</span><span class="hover-effect">o</span><span class="hover-effect"> i</span><span class="hover-effect">n</span><span class="hover-effect">n</span><span class="hover-effect">o</span><span class="hover-effect">v</span><span class="hover-effect">a</span><span class="hover-effect">t</span><span class="hover-effect">e</span><span class="hover-effect"> w</span><span class="hover-effect">i</span><span class="hover-effect">t</span><span class="hover-effect">h</span><span class="hover-effect">o</span><span class="hover-effect">u</span><span class="hover-effect">t</span><span class="hover-effect"> a</span><span class="hover-effect">n</span><span class="hover-effect">y</span><span class="hover-effect"> d</span><span class="hover-effect">i</span><span class="hover-effect">s</span><span class="hover-effect">t</span><span class="hover-effect">r</span><span class="hover-effect">a</span><span class="hover-effect">c</span><span class="hover-effect">t</span><span class="hover-effect">i</span><span class="hover-effect">o</span><span class="hover-effect">n</span><span class="hover-effect">s.</span></p></div>
+
 						 <div class="slide"><h2 class="title title--style-7"><span class="hover-effect">Y</span><span class="hover-effect">o</span><span class="hover-effect">u</span><span class="hover-effect"> w</span><span class="hover-effect">i</span><span class="hover-effect">l</span><span class="hover-effect">l</span><span class="hover-effect"> h</span><span class="hover-effect">a</span><span class="hover-effect">v</span><span class="hover-effect">e</span><span class="hover-effect"> 3</span><span class="hover-effect">0</span><span class="hover-effect"> h</span><span class="hover-effect">o</span><span class="hover-effect">u</span><span class="hover-effect">r</span><span class="hover-effect">s</span><span class="hover-effect"> t</span><span class="hover-effect">o</span><span class="hover-effect"> d</span><span class="hover-effect">e</span><span class="hover-effect">l</span><span class="hover-effect">v</span><span class="hover-effect">e</span><span class="hover-effect"> i</span><span class="hover-effect">n</span><span class="hover-effect">t</span><span class="hover-effect">o</span><span class="hover-effect"> y</span><span class="hover-effect">o</span><span class="hover-effect">u</span><span class="hover-effect">r</span><span class="hover-effect"> c</span><span class="hover-effect">u</span><span class="hover-effect">r</span><span class="hover-effect">i</span><span class="hover-effect">o</span><span class="hover-effect">s</span><span class="hover-effect">i</span><span class="hover-effect">t</span><span class="hover-effect">i</span><span class="hover-effect">e</span><span class="hover-effect">s.</span></h2></div>
+
 						 <div class="slide"><h2 class="title title--style-7"><span class="hover-effect">L</span><span class="hover-effect">e</span><span class="hover-effect">a</span><span class="hover-effect">r</span><span class="hover-effect">n</span><span class="hover-effect"> s</span><span class="hover-effect">o</span><span class="hover-effect">m</span><span class="hover-effect">e</span><span class="hover-effect">t</span><span class="hover-effect">h</span><span class="hover-effect">i</span><span class="hover-effect">n</span><span class="hover-effect">g</span><span class="hover-effect"> n</span><span class="hover-effect">e</span><span class="hover-effect">w,</span><span class="hover-effect"> a</span><span class="hover-effect">n</span><span class="hover-effect">d</span><span class="hover-effect"> m</span><span class="hover-effect">a</span><span class="hover-effect">k</span><span class="hover-effect">e</span><span class="hover-effect"> s</span><span class="hover-effect">o</span><span class="hover-effect">m</span><span class="hover-effect">e</span><span class="hover-effect">t</span><span class="hover-effect">h</span><span class="hover-effect">i</span><span class="hover-effect">n</span><span class="hover-effect">g</span><span class="hover-effect"> a</span><span class="hover-effect">w</span><span class="hover-effect">e</span><span class="hover-effect">s</span><span class="hover-effect">o</span><span class="hover-effect">m</span><span class="hover-effect">e.</span></h2></div>
+
 						 <div class="slide"><h2 class="title title--style-7"><span class="hover-effect">M</span><span class="hover-effect">e</span><span class="hover-effect">e</span><span class="hover-effect">t</span><span class="hover-effect"> o</span><span class="hover-effect">t</span><span class="hover-effect">h</span><span class="hover-effect">e</span><span class="hover-effect">r</span><span class="hover-effect"> e</span><span class="hover-effect">n</span><span class="hover-effect">t</span><span class="hover-effect">h</span><span class="hover-effect">u</span><span class="hover-effect">s</span><span class="hover-effect">i</span><span class="hover-effect">a</span><span class="hover-effect">s</span><span class="hover-effect">t</span><span class="hover-effect">i</span><span class="hover-effect">c</span><span class="hover-effect"> h</span><span class="hover-effect">a</span><span class="hover-effect">c</span><span class="hover-effect">k</span><span class="hover-effect">e</span><span class="hover-effect">r</span><span class="hover-effect">s,</span><span class="hover-effect"> p</span><span class="hover-effect">u</span><span class="hover-effect">s</span><span class="hover-effect">h</span><span class="hover-effect"> y</span><span class="hover-effect">o</span><span class="hover-effect">u</span><span class="hover-effect">r</span><span class="hover-effect"> b</span><span class="hover-effect">o</span><span class="hover-effect">u</span><span class="hover-effect">n</span><span class="hover-effect">d</span><span class="hover-effect">a</span><span class="hover-effect">r</span><span class="hover-effect">i</span><span class="hover-effect">e</span><span class="hover-effect">s.</span> </h2></div>
+
 						 <div class="slide"><h2 class="title title--style-7"><span class="hover-effect">R</span><span class="hover-effect">e</span><span class="hover-effect">a</span><span class="hover-effect">l</span><span class="hover-effect">i</span><span class="hover-effect">z</span><span class="hover-effect">e</span><span class="hover-effect"> t</span><span class="hover-effect">h</span><span class="hover-effect">e</span><span class="hover-effect"> p</span><span class="hover-effect">r</span><span class="hover-effect">o</span><span class="hover-effect">j</span><span class="hover-effect">e</span><span class="hover-effect">c</span><span class="hover-effect">t</span><span class="hover-effect">s</span><span class="hover-effect"> o</span><span class="hover-effect">f</span><span class="hover-effect"> y</span><span class="hover-effect">o</span><span class="hover-effect">u</span><span class="hover-effect">r</span><span class="hover-effect"> d</span><span class="hover-effect">r</span><span class="hover-effect">e</span><span class="hover-effect">a</span><span class="hover-effect">m</span><span class="hover-effect">s!</span> </h2></div>
 						 <div class="slide"><h2 class="title title--style-7"><span class="hover-effect">S</span><span class="hover-effect">o,</span><span class="hover-effect"> w</span><span class="hover-effect">h</span><span class="hover-effect">a</span><span class="hover-effect">t</span><span class="hover-effect"> a</span><span class="hover-effect">r</span><span class="hover-effect">e</span><span class="hover-effect"> y</span><span class="hover-effect">o</span><span class="hover-effect">u</span><span class="hover-effect"> w</span><span class="hover-effect">a</span><span class="hover-effect">i</span><span class="hover-effect">t</span><span class="hover-effect">i</span><span class="hover-effect">n</span><span class="hover-effect">g</span><span class="hover-effect"> f</span><span class="hover-effect">o</span><span class="hover-effect">r?</span></h2></div>
 					   </div>
@@ -476,11 +493,43 @@
 		   <a href="www.google.com" class="w3-large w3-black w3-hover-light-grey w3-white w3-text-light-grey w3-wide w3-padding-large" style="text-decoration: none;margin-top: 0px;"> REGISTER  </a>
 		</div>
 
-		<div  class="w3-hide-small w3-center" style=" padding-top: 7%;padding-bottom: 7%;background-color: #fff ">
+		<div  class="w3-hide-small w3-center" style=" padding-top: 7%;padding-bottom: 5%;background-color: #fff ">
 		   <p class="w3-wide w3-text-black">START PACKING YOUR BAGS FOR THIS AWESOME ADVENTURE ON  <span class="w3-text-blue"> 19-OCT-2017 </span> @ ABES ENGG COLLEGE</p><br><br>
 		   <a href="www.google.com" class="w3-large w3-hover-grey w3-black w3-text-white w3-padding-large wow fadeInDown" data-wow-offset="300" style="text-decoration: none;margin-top: 0px;"> REGISTER  </a>
 		</div>
         </div>
+        
+        <div class="sw-row" style="padding-top: 5%;padding-bottom: 25%;background-color: #fff">
+          <hr style="margin-left: 5%;margin-right: 5%;">
+		  <p style="text-transform: uppercase;font-size: 30px;text-align:center;letter-spacing: 4px" class="neucha">Keep Your Eyes on the</p>
+		  <p style="text-transform: uppercase;font-size: 50px;text-align:center;margin-top: -2%;margin-bottom: -1% ;font-family: Avant Garde,Avantgarde,Century Gothic,CenturyGothic,AppleGothic,sans-serif;">Prize</p>
+			<div id="wrapper" class="wrapper sw-coll" style="">
+					<div class="front front-1">
+						<p class="p-1"><img style="cursor: pointer;" src="img/2nd-prize.png"/></p>
+					</div>
+					<div class="text_onclick-1 text_onclick" >
+						<p style="color: black">Hello</p>
+					</div>
+			</div>
+			<div id="wrapper-2" class="wrapper-2 sw-coll">
+					<div class="front-2">
+						<p class="p-2"><img style="cursor: pointer;" src="img/1st-prize.png"/></p>
+					</div>
+					<div class="text_onclick-2 text_onclick" >
+						<p style="color: black">Hello</p>
+					</div>
+			</div>
+			<div id="wrapper-3" class="wrapper sw-coll" style="margin-top: 5%">
+					<div class="front front-3">
+						<p class="p-3"><img style="cursor: pointer;" src="img/3rd-prize.png"/></p>
+					</div>
+					<div class="text_onclick-3 text_onclick" >
+						<p style="color: black">Hello</p>
+					</div>
+			</div>
+			
+		</div>
+
 		<div id="sponsors" class="" style="background: url('./img/website3.jpg'); padding-top: 15%;padding-bottom:;margin-top: -80px;width: 100%">
 			<div class="">
 				<h2 class="w3-hide-medium w3-hide-large allerta w3-center w3-xxxlarge w3-center" style="margin-top: 25vh;">
@@ -717,6 +766,13 @@
 		<script src="js/sponsor_classie.js"></script>
 		<script src="js/sponsor_dynamics.min.js"></script>
 		<script src="js/sponsor_main.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script src="js/appshowcase.js"></script>
+		<script>
+			$(function() {
+				Showcase.init();
+			});
+		</script>
 		<script>
 			(function() {
 				document.documentElement.className = 'js';
