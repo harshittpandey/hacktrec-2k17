@@ -29,7 +29,7 @@
 	-webkit-align-items: center;
 	align-items: center;
 	width: 100vw;
-    margin-top: 10%;
+    margin-top: 8%;
 	text-align: center;
 }
 
@@ -66,8 +66,8 @@
 
 .deco--circle,
 .sponsor_slide__inner {
-	width: 350px;
-	height: 350px;
+	width: 370px;
+	height: 370px;
 }
 
 .sponsor_slide__item {
@@ -100,20 +100,19 @@
 	left: 50%;
 	margin: -225px 0 0 -225px;
 	border-radius: 50%;
-	background: #ADADAD;
+	background: #fff;
 }
 
 .sponsor_slide__title {
 	position: relative;
-	text-indent: 4px;
+	text-indent: -65px;
 	letter-spacing: 4px;
 	text-transform: uppercase;
 	color: #b2b2b4;
 }
 
 .sponsor_slide__title--preview {
-	font-size: 1.05em;
-	margin: 2em 0 0 0;
+	font-size: 1.5em;
 	padding: 0;
 	opacity: 0;
 	text-align: center;
@@ -148,7 +147,8 @@
 .sponsor_slide__img {
 	position: relative;
 	display: block;
-	margin: 0 auto;
+	margin-left: -20%;
+	margin-bottom: 20%;
 }
 
 .sponsor_slide__img--small {
