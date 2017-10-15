@@ -43,7 +43,7 @@
 		this.items = [].slice.call(this.el.querySelectorAll('.sponsor_slide'));
 		// total items
 		this.itemsTotal = this.items.length;
-		if( this.itemsTotal < 2 ) return;
+		if( this.itemsTotal < 1 ) return;
 
 		// content close control
 		this.closeCtrl = this.el.querySelector('.action--close');
@@ -59,30 +59,9 @@
 
 	CircleSlideshow.prototype._init = function() {
 		// add navigation ctrls and left & right circles to the DOM
-		this.navLeftCtrl = document.createElement('button');
-		this.navLeftCtrl.className = 'navbutton navbutton--next';
-		this.navLeftCtrl.setAttribute('aria-label', 'Next item');
-		this.navLeftCtrl.innerHTML = '<svg width="100px" height="30px" viewBox="0 0 100 30"><polyline class="navbutton__line" fill="none" stroke="#6CD84E" stroke-width="5" points="69.821,3.795 92.232,26.205 0,26.205"/></svg>';
-
-		this.navRightCtrl = document.createElement('button');
-		this.navRightCtrl.className = 'navbutton navbutton--prev';
-		this.navRightCtrl.setAttribute('aria-label', 'Previous item');
-		this.navRightCtrl.innerHTML = '<svg width="100px" height="30px" viewBox="0 0 100 30"><polyline class="navbutton__line" fill="none" stroke="#6CD84E" stroke-width="5" points="30.179,26.205 7.768,3.795 100,3.795"/></svg>';
-
-		this.el.insertBefore(this.navLeftCtrl, this.el.firstChild);
-		this.el.insertBefore(this.navRightCtrl, this.el.firstChild);
-
-		var leftCircle = document.createElement('div'), rightCircle = document.createElement('div');
-		leftCircle.className = 'deco deco--circle deco--circle-left';
-		rightCircle.className = 'deco deco--circle deco--circle-right';
 		
-		this.el.insertBefore(leftCircle, this.el.firstChild);
-		this.el.insertBefore(rightCircle, this.el.firstChild);
-
-		this.circles = {left: leftCircle, right: rightCircle};
-		dynamics.css(this.circles.left, {scale: 0.8});
-		dynamics.css(this.circles.right, {scale: 0.8});
-
+		
+		
 		// add the expander element per slide (.deco--expander)
 		this.items.forEach(function(item) {
 			var expanderEl = document.createElement('div');
@@ -101,10 +80,7 @@
 	CircleSlideshow.prototype._initEvents = function() {
 		var self = this;
 
-		// slideshow navigation
-		this.navRightCtrl.addEventListener('click', function() { self._navigate('left'); });
-		this.navLeftCtrl.addEventListener('click', function() { self._navigate('right'); });
-
+		
 		// opening items
 		this.items.forEach(function(item) {
 			item.querySelector('.action--open').addEventListener('click', function(ev) {
